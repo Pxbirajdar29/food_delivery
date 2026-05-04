@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🍕 FoodDash - Fast Delivery</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <span class="logo-icon">🍔</span>
+                <span class="logo-text">Food<span class="highlight">Dash</span></span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#" onclick="showHome()">Home</a></li>
+                <li><a href="#" onclick="showMenu()">Menu</a></li>
+                <li><a href="#" onclick="showCart()">Cart <span id="cartCount" class="cart-badge">0</span></a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Home Section -->
+    <section id="homeSection" class="hero">
+        <div class="hero-content">
+            <h1>Delicious Food Delivered <span class="highlight">To Your Doorstep</span></h1>
+            <p>Order from the best restaurants in town. Fast delivery, hot food!</p>
+            <button class="cta-btn" onclick="showMenu()">Explore Menu 🚀</button>
+        </div>
+    </section>
+
+    <!-- Menu Section -->
+    <section id="menuSection" class="menu-section" style="display: none;">
+        <h2 class="section-title">Our <span class="highlight">Popular Dishes</span></h2>
+        <div class="menu-grid" id="menuGrid"></div>
+    </section>
+
+    <!-- Cart Modal -->
+    <div id="cartModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeCart()">&times;</span>
+            <h2>Your Cart 🛒</h2>
+            <div id="cartItems"></div>
+            <div class="cart-total">
+                <h3>Total: ₹<span id="cartTotal">0</span></h3>
+                <button class="checkout-btn" onclick="checkout()">Proceed to Checkout</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
